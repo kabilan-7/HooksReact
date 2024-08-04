@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState, useRef} from 'react';
 import UseMemo from './UseMemo';
 import UseReducer from './UseReducer';
+import UseCallback from './UseCallback';
 function App() { 
   //useState
   //if we use callback function it only run one time of render 
@@ -18,7 +19,7 @@ function App() {
         setCount(prev=>prev-1)
     }
   //useEffect
-  useEffect(()=>{
+  useEffect(()=> {
     console.log("useEffect")
   },[count])
 
@@ -29,8 +30,9 @@ function App() {
   }
   return (
     <div className='App'>
-      
-        <UseReducer/>
+       <UseMemo/>
+        {/* <UseCallback/> */}
+        {/* <UseReducer/> */}
         {/* <input ref={inputref} type="text" value={name}  onChange={(e)=>{
           setName(e.target.value)
         }} />
