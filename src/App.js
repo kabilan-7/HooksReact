@@ -4,6 +4,7 @@ import { useEffect, useState, useRef} from 'react';
 import UseMemo from './UseMemo';
 import UseReducer from './UseReducer';
 import UseCallback from './UseCallback';
+import CustomHooks from './CustomHooks';
 function App() { 
   //useState
   //if we use callback function it only run one time of render 
@@ -30,7 +31,8 @@ function App() {
   }
   return (
     <div className='App'>
-       <UseMemo/>
+      <CustomHooks/>
+       {/* <UseMemo/> */}
         {/* <UseCallback/> */}
         {/* <UseReducer/> */}
         {/* <input ref={inputref} type="text" value={name}  onChange={(e)=>{

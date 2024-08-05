@@ -6,7 +6,7 @@ const UseMemo = () => {
     const doublenumber = useMemo(()=>{
      return slowfunction(number)
     },[number])
-    const theme = useMemo(()=>{ 
+    const theme = useMemo(()=>{  //doesn't recompute every time you render your componenet
        //every time component re-render it will create new memory for theme object.
        return {
         backgroundColor:dark?'#333':'#FFF',
