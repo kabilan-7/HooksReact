@@ -9,7 +9,7 @@ const UseMemo = () => {
     const theme = useMemo(()=>{  //doesn't recompute every time you render your componenet
        //every time component re-render it will create new memory for theme object.
        return {
-        backgroundColor:dark?'#333':'#FFF',
+       backgroundColor:dark?'#333':'#FFF',
         color:dark? '#FFF':'#333'
        }
     },[dark])
@@ -20,7 +20,7 @@ const UseMemo = () => {
     function slowfunction(num){
       console.log("calling slow function")
       for(let i=0;i<10000000;i++){
-
+  
       }
       return num*2;
     }
